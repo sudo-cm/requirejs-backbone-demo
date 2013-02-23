@@ -12,12 +12,12 @@ define(["backbone"], function() {
 
 		// インスタンス生成時に実行
 		initialize: function() {
-			console.dir("[Model]TodoModel::initialize()");
+			console.log("[Model]TodoModel::initialize()");
 		},
 
 		// バリデーションを定義
 		validate: function(attrs) {
-			console.dir("[Model]TodoModel::validate()");
+			console.log("[Model]TodoModel::validate()");
 			var ret = "";
 
 			if(_.isEmpty(attrs.content)) {

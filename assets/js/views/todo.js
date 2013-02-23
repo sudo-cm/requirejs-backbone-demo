@@ -13,7 +13,7 @@ define(["backbone"], function() {
 
 		// インスタンス生成時に実行
 		initialize: function() {
-			console.dir("[View]TodoView::initialize()");
+			console.log("[View]TodoView::initialize()");
 		},
 
 		// レンダリング

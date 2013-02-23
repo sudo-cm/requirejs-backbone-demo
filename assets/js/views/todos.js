@@ -18,7 +18,7 @@ define(["models/todo", "collections/todos", "views/todo", "backbone"], function(
 
 		// インスタンス生成時に実行
 		initialize: function() {
-			console.dir("[View]TodoListView::initialize()");
+			console.log("[View]TodoListView::initialize()");
 
 			// Collectionのインスタンスを生成
 			this.collection = new TodoCollection();
@@ -31,7 +31,7 @@ define(["models/todo", "collections/todos", "views/todo", "backbone"], function(
 
 		// レンダリング
 		render: function(todo) {
-			console.dir("[View]TodoListView::render()");
+			console.log("[View]TodoListView::render()");
 
 			// １つのTodoを表すViewのインスタンスを生成
 			var view = new TodoView({
@@ -45,7 +45,7 @@ define(["models/todo", "collections/todos", "views/todo", "backbone"], function(
 		addTodo: function() {
 			var todo, input;
 
-			console.dir("[View]TodoListView::addTodo()");
+			console.log("[View]TodoListView::addTodo()");
 
 			// modelのインスタンスを生成
 			todo = new TodoModel();
@@ -64,7 +64,7 @@ define(["models/todo", "collections/todos", "views/todo", "backbone"], function(
 				validate: true
 			});
 
-			console.dir('[Model]TodoListModel::isValid()');
+			console.log('[Model]TodoListModel::isValid()');
 			if(todo.isValid()) {
 				// collectionにmodelを追加
 				this.collection.add(todo);
@@ -73,12 +73,12 @@ define(["models/todo", "collections/todos", "views/todo", "backbone"], function(
 			// 入力内容をリセット
 			input.val('');
 
-			console.dir("--End--");
+			console.log("--End--");
 		},
 
 		// バリデーションエラー
 		onInvalid: function(model) {
-			console.dir('[View]TodoListView::onInvalid()');
+			console.log('[View]TodoListView::onInvalid()');
 			alert(model.validationError);
 		}
 	});

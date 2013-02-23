@@ -24,7 +24,7 @@ requirejs.config({
 // require(["module/name", ...], function(params){ ... });
 require(["views/todos", "backbone"], function(TodoListView) {
 
-	console.dir("--Start--");
+	console.log("--Start--");
 
 	// 最初にTodoリストのViewインスタンスを生成
 	var app = new TodoListView();
